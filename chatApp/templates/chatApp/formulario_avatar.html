@@ -1,0 +1,19 @@
+{% extends "chatApp/base.html" %}
+
+{% load static %}
+
+{% block contenidoVarios %}
+
+<div class="container">
+
+    <h3>Ingresa tu Avatar</h3>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p></p>
+        <button type="submit" class="btn btn-primary btn-sm">Upload</button>
+    </form>
+</div>
+
+{% endblock contenidoVarios %}

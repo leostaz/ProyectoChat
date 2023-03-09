@@ -1,0 +1,34 @@
+{% extends "chatApp/base.html" %}
+
+{% load static %}
+
+{% block subtitulo %}Login | {% endblock subtitulo %}
+
+{% block contenidoVarios %}
+
+<div class="container">
+    <div class="mb-3 text-left">
+        <h3>Iniciar sesión</h3>
+    </div>
+
+    <form method="post" class="row g-3">
+        {% csrf_token %}
+
+        <div class="input-group-sm col-sm-3">
+            <label class="form-label">Usuario</label>
+            <input type="text" name="username" class="form-control">
+        </div>
+
+        <div class="input-group-sm col-sm-3">
+            <label class="form-label">Contraseña</label>
+            <input type="password" name="password" class="form-control">
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock contenidoVarios %}

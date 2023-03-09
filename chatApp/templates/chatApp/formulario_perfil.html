@@ -1,0 +1,38 @@
+{% extends "chatApp/base.html" %}
+
+{% load static %}
+
+{% block subtitulo %}Perfil | {% endblock subtitulo %}
+
+{% block contenidoVarios %}
+
+<div class="container">
+
+    <h1>Tu usuario es: <b>{{ object.username }}</b></h1>
+
+    <div class="mb-3 text-left">
+        <h3>Editar datos:</h3>
+    </div>
+    
+    <form method="post" class="form-group col-md-4">
+        {% csrf_token %}
+
+        <div class="mb-3 input-group-sm">
+            <label class="form-label">Nombre</label>
+            <input type="text" name="nombre" class="form-control">
+        </div>
+        <div class="mb-3 input-group-sm">
+            <label class="form-label">Apellido</label>
+            <input type="text" name="apellido" class="form-control">
+        </div>
+        <div class="mb-3 input-group-sm">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="name@example.com">
+        </div>
+        <p></p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+</div>
+
+{% endblock contenidoVarios %}
