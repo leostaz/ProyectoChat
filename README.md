@@ -1,4 +1,4 @@
-# ProyectoChat (Python, html, django)
+# ProyectoChat (Django)
 
 ## Instrucciones instalar proyecto en local
 + Crea una carpeta contenedora madre
